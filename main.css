@@ -15,6 +15,12 @@ ul li {
   padding: 2px 5px;
   background-color: #4776a1;
 }
+ul li .done {
+  border-radius: 50%;
+  margin: 0;
+  height: 28px;
+  width: 28px;
+}
 
 button {
   border: 1px solid #b3b3b3;
@@ -23,7 +29,8 @@ button {
   border-radius: 5px;
 }
 button:hover {
-  background-color: yellow;
+  background-color: #5b94c9;
+  color: white;
 }
 
 ::placeholder {
@@ -37,8 +44,9 @@ input[type=text] {
   padding: 0 5px;
   border-radius: 5px;
 }
-input[type=text]:hover {
-  background-color: yellow;
+input[type=text]:hover, input[type=text]:active {
+  background-color: #5b94c9;
+  color: white;
 }
 
 #control {

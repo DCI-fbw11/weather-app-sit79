@@ -15,7 +15,7 @@ class ListBinding {
     let i = 0;
     for (let text of this.textList) {
       let item = document.createElement("li");
-      let content = `<button data-id=${i}>DONE</button> ${text}`;
+      let content = `<button class="done" data-id=${i}>ok</button> ${text}`;
       item.innerHTML = content;
       this.element.appendChild(item);
       i++;
