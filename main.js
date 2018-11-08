@@ -5,10 +5,6 @@ class ListBinding {
     // document.getElementById fur input
     // input.addeventlister on click
     // sonder form addeventlister on submit
-    this.input = document.getElementById("newEntry");
-    this.updateButton = document.getElementById("updateButton");
-    this.submitButton = document.getElementById("submitButton");
-    this.updateButton.addEventListener("click", console.log(this.textList));
   }
   deleteAll() {
     while (this.element.firstChild)
@@ -43,3 +39,15 @@ const myList = document.getElementById("myList");
 const doneList = document.getElementById("doneList");
 var firstList = new ListBinding(myList);
 // var secondList = new ListBinding(doneList);
+
+var newEntry = document.getElementById("newEntry");
+var updateButton = document.getElementById("updateButton");
+var submitButton = document.getElementById("submitButton");
+
+function test() {
+  console.log("clicked");
+}
+
+updateButton.addEventListener("click", function() {
+  firstList.update();
+});

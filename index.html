@@ -11,24 +11,22 @@
   <body>
     <h1>Inheritance</h1>
     <h3>Polymorphism, super(), extends [className]</h3>
-    <form id="control">
-      <button type="submit" id="updateButton">Update List</button>
+    <div id="control">
+      <button id="updateButton">Update List</button>
       <input type="text" id="newEntryField" placeholder="enter new task" />
-      <button type="submit" id="submitButton">Submit Task</button>
+      <button id="submitButton">Submit Task</button>
       <ul id="myList"></ul>
       <ul id="doneList"></ul>
-      <!--
-        <button type="submit" onclick="firstList.deleteFirst()">
-          Delete Top Entry
-        </button>
-        <button type="submit" onclick="firstList.deleteLast()">
-          Delete Bottom Entry
-        </button>
-        <button type="submit" onclick="console.log(firstList.textList)">
-          Console.log List
-        </button>
-      -->
-    </form>
+      <button type="submit" onclick="firstList.deleteFirst()">
+        Delete Top Entry
+      </button>
+      <button type="submit" onclick="firstList.deleteLast()">
+        Delete Bottom Entry
+      </button>
+      <button type="submit" onclick="console.log(firstList.textList)">
+        Console.log List
+      </button>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
