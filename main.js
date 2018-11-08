@@ -8,7 +8,7 @@ class ListBinding {
     this.input = document.getElementById("newEntry");
     this.updateButton = document.getElementById("updateButton");
     this.submitButton = document.getElementById("submitButton");
-    this.updateButton.addEventListener("click", this.update());
+    this.updateButton.addEventListener("click", console.log(this.textList));
   }
   deleteAll() {
     while (this.element.firstChild)
