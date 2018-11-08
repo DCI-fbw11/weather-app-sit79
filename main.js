@@ -1,8 +1,7 @@
 class ListBinding {
   constructor(element) {
     this.element = element;
-    this.textList = [];
-    this.doneList = [];
+    this.textList = ["First Item"];
   }
   deleteAll() {
     while (this.element.firstChild)
@@ -33,5 +32,4 @@ class ListBinding {
 const myList = document.getElementById("myList");
 const doneList = document.getElementById("doneList");
 var firstList = new ListBinding(myList);
-var secondList = new Listbinding(doneList);
-secondList.add("Cake");
+var secondList = new ListBinding(doneList);
