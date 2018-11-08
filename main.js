@@ -1,7 +1,7 @@
 class ListBinding {
   constructor(element) {
     this.element = element;
-    this.textList = ["One", "Two"];
+    this.textList = ["walk the dog", "go shopping", "laugh about something"];
     // document.getElementById fur input
     // input.addeventlister on click
     // sonder form addeventlister on submit
@@ -53,19 +53,19 @@ var consoleButton = document.getElementById("consoleLog");
 var deleteFirstButton = document.getElementById("deleteFirst");
 var deleteLastButton = document.getElementById("deleteLast");
 
-updateButton.addEventListener("click", function() {
+updateButton.addEventListener("click", function () {
   firstList.update();
 });
-submitButton.addEventListener("click", function() {
+submitButton.addEventListener("click", function () {
   let entry = document.getElementById("newEntryField").value;
   firstList.add(entry);
 });
-consoleButton.addEventListener("click", function() {
+consoleButton.addEventListener("click", function () {
   console.log(firstList.textList);
 });
-deleteFirstButton.addEventListener("click", function() {
+deleteFirstButton.addEventListener("click", function () {
   firstList.deleteFirst();
 });
-deleteLastButton.addEventListener("click", function() {
+deleteLastButton.addEventListener("click", function () {
   firstList.deleteLast();
 });

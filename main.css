@@ -1,21 +1,54 @@
 html {
   font-family: "Source Code Pro", monospace;
   background: #141414;
-  color: #e6e6e6; }
+  color: #e6e6e6;
+}
 
 ul {
   list-style: none;
-  padding: 0; }
-  ul li {
-    border: 1px solid #b3b3b3;
-    margin: 5px 0px;
-    padding: 2px 5px;
-    background-color: #4776a1; }
+  padding: 0;
+}
+ul li {
+  border: 1px solid #b3b3b3;
+  border-radius: 5px;
+  margin: 5px 0px;
+  padding: 2px 5px;
+  background-color: #4776a1;
+}
 
-input {
-  padding: 0 5px; }
+button {
+  border: 1px solid #b3b3b3;
+  height: 28px;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: yellow;
+}
+
+::placeholder {
+  text-align: center;
+  font-size: 110%;
+}
+
+input[type=text] {
+  border: 1px solid #b3b3b3;
+  height: 28px;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+input[type=text]:hover {
+  background-color: yellow;
+}
 
 #control {
-  width: 400px; }
+  width: 50%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
 
 /*# sourceMappingURL=main.css.map */

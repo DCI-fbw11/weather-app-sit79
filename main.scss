@@ -7,18 +7,51 @@ html {
 ul {
   list-style: none; //   width: 30%;
   padding: 0;
+
   li {
     border: 1px solid rgb(179, 179, 179);
+    border-radius: 5px;
     margin: 5px 0px;
     padding: 2px 5px;
     background-color: rgb(71, 118, 161);
   }
 }
 
-input {
+button {
+  border: 1px solid rgb(179, 179, 179);
+  height: 28px;
+  padding: 2px 5px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: yellow;
+  }
+
+  // font-size: 100%;
+}
+
+::placeholder {
+  text-align: center;
+  font-size: 110%;
+}
+
+input[type=text] {
+  border: 1px solid rgb(179, 179, 179);
+  height: 28px;
   padding: 0 5px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: yellow;
+  }
 }
 
 #control {
-  width: 400px;
+  width: 50%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
 }
