@@ -1,0 +1,21 @@
+html {
+  font-family: "Source Code Pro", monospace;
+  background: #141414;
+  color: #e6e6e6; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+  ul li {
+    border: 1px solid #b3b3b3;
+    margin: 5px 0px;
+    padding: 3px;
+    background-color: #4776a1; }
+
+input {
+  padding: 0 5px; }
+
+#control {
+  width: 400px; }
+
+/*# sourceMappingURL=main.css.map */

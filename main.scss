@@ -1,0 +1,24 @@
+html {
+  font-family: "Source Code Pro", monospace;
+  background: rgb(20, 20, 20);
+  color: rgb(230, 230, 230);
+}
+
+ul {
+  list-style: none; //   width: 30%;
+  padding: 0;
+  li {
+    border: 1px solid rgb(179, 179, 179);
+    margin: 5px 0px;
+    padding: 3px;
+    background-color: rgb(71, 118, 161);
+  }
+}
+
+input {
+  padding: 0 5px;
+}
+
+#control {
+  width: 400px;
+}
