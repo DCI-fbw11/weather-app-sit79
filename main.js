@@ -1,7 +1,7 @@
 class ListBinding {
   constructor(element) {
     this.element = element;
-    this.textList = ["TEST", "Another Test"];
+    this.textList = ["One", "Two"];
     // document.getElementById fur input
     // input.addeventlister on click
     // sonder form addeventlister on submit
@@ -15,15 +15,21 @@ class ListBinding {
     let i = 0;
     for (let text of this.textList) {
       let item = document.createElement("li");
-      let template = `<button data-id=${i}>DONE</button> ${text}`;
-      item.innerHTML = template;
+      let content = `<button data-id=${i}>DONE</button> ${text}`;
+      item.innerHTML = content;
       this.element.appendChild(item);
       i++;
     }
   }
   add(item) {
-    this.textList.push(item);
-    this.update();
+    if (item !== "") {
+      this.textList.push(item);
+      this.update();
+    } else {
+      window.alert(
+        "If you have nothing to do,\nwhat do you need a To Do List for?"
+      );
+    }
   }
   deleteFirst() {
     this.textList.shift();
@@ -43,11 +49,23 @@ var firstList = new ListBinding(myList);
 var newEntry = document.getElementById("newEntry");
 var updateButton = document.getElementById("updateButton");
 var submitButton = document.getElementById("submitButton");
-
-function test() {
-  console.log("clicked");
-}
+var consoleButton = document.getElementById("consoleLog");
+var deleteFirstButton = document.getElementById("deleteFirst");
+var deleteLastButton = document.getElementById("deleteLast");
 
 updateButton.addEventListener("click", function() {
   firstList.update();
+});
+submitButton.addEventListener("click", function() {
+  let entry = document.getElementById("newEntryField").value;
+  firstList.add(entry);
+});
+consoleButton.addEventListener("click", function() {
+  console.log(firstList.textList);
+});
+deleteFirstButton.addEventListener("click", function() {
+  firstList.deleteFirst();
+});
+deleteLastButton.addEventListener("click", function() {
+  firstList.deleteLast();
 });
