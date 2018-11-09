@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box; }
+
 html {
   font-family: "Source Code Pro", monospace;
   background: #141414;
@@ -24,6 +27,7 @@ button {
   padding: 2px 5px;
   border-radius: 5px; }
   button:hover {
+    transition: all 3s ease-in-out;
     background-color: #5b94c9;
     color: white; }
 
@@ -31,12 +35,13 @@ button {
   text-align: center;
   font-size: 110%; }
 
-input[type=text] {
+input[type="text"] {
   border: 1px solid #b3b3b3;
   height: 28px;
   padding: 0 5px;
   border-radius: 5px; }
-  input[type=text]:hover, input[type=text]:active {
+  input[type="text"]:hover, input[type="text"]:active {
+    transition: all 3s ease-in-out;
     background-color: #5b94c9;
     color: white; }
 

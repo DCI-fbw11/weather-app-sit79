@@ -1,65 +1,68 @@
+@import "config";
+* {
+    box-sizing: border-box;
+}
+
 html {
-  font-family: "Source Code Pro", monospace;
-  background: rgb(20, 20, 20);
-  color: rgb(230, 230, 230);
+    font-family: "Source Code Pro", monospace;
+    background: rgb(20, 20, 20);
+    color: rgb(230, 230, 230);
 }
 
 ul {
-  list-style: none; //   width: 30%;
-  padding: 0;
-
-  li {
-    border: 1px solid rgb(179, 179, 179);
-    border-radius: 5px;
-    margin: 5px 0px;
-    padding: 2px 5px;
-    background-color: rgb(71, 118, 161);
-
-    .done {
-      border-radius: 50%;
-      margin: 0;
-      height: 28px;
-      width: 28px;
+    list-style: none; //   width: 30%;
+    padding: 0;
+    li {
+        border: 1px solid rgb(179, 179, 179);
+        border-radius: 5px;
+        margin: 5px 0px;
+        padding: 2px 5px;
+        background-color: rgb(71, 118, 161);
+        .done {
+            border-radius: 50%;
+            margin: 0;
+            height: 28px;
+            width: 28px;
+        }
     }
-  }
 }
 
 button {
-  border: 1px solid rgb(179, 179, 179);
-  height: 28px;
-  padding: 2px 5px;
-  border-radius: 5px;
-
-  &:hover {
-    background-color: rgb(91, 148, 201);
-    color: white;
-  }
+    border: 1px solid rgb(179, 179, 179);
+    height: 28px;
+    padding: 2px 5px;
+    border-radius: 5px;
+    &:hover {
+        @include easeOut();
+        background-color: rgb(91, 148, 201);
+        color: white;
+    }
 }
 
 ::placeholder {
-  text-align: center;
-  font-size: 110%;
+    text-align: center;
+    font-size: 110%;
 }
 
-input[type=text] {
-  border: 1px solid rgb(179, 179, 179);
-  height: 28px;
-  padding: 0 5px;
-  border-radius: 5px;
-
-  &:hover,
-  &:active {
-    background-color: rgb(91, 148, 201);
-    color: white;
-  }
+input[type="text"] {
+    border: 1px solid rgb(179, 179, 179);
+    height: 28px;
+    padding: 0 5px;
+    border-radius: 5px;
+    &:hover,
+    &:active {
+        @include easeOut();
+        background-color: rgb(91, 148, 201);
+        color: white;
+    }
 }
 
 #control {
-  width: 50%;
-  max-width: 400px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+    width: 50%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
 }
