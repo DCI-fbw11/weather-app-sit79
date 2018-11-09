@@ -2,5 +2,5 @@ $primary-color: rgb(71, 118, 161);
 $secondary-color: rgb(179, 179, 179);
 $primary-text-color: #444;
 @mixin easeOut {
-    transition: all 3s ease-in-out;
+  transition: all 0.5s ease-out;
 }
