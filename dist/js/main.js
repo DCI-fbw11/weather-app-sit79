@@ -1,10 +1,8 @@
 class ListBinding {
   constructor(element) {
     this.element = element;
-    this.textList = ["walk the dog", "go shopping", "laugh about something"];
-    // document.getElementById fur input
-    // input.addeventlister on click
-    // sonder form addeventlister on submit
+    this.textList = [];
+    this.doneList = [];
   }
   deleteAll() {
     while (this.element.firstChild)
@@ -15,7 +13,7 @@ class ListBinding {
     let i = 0;
     for (let text of this.textList) {
       let item = document.createElement("li");
-      let content = `<button class="done" data-id=${i}>ok</button> ${text}`;
+      let content = `<p class="done" onclick="firstList.isDone(${i})">${text}</p>`;
       item.innerHTML = content;
       this.element.appendChild(item);
       i++;
@@ -39,12 +37,16 @@ class ListBinding {
     this.textList.pop();
     this.update();
   }
+  isDone(index) {
+    let tempValue = this.textList.splice(index, 1);
+    this.doneList.push(tempValue);
+    this.update();
+  }
 }
 
 const myList = document.getElementById("myList");
 const doneList = document.getElementById("doneList");
 var firstList = new ListBinding(myList);
-// var secondList = new ListBinding(doneList);
 
 var newEntry = document.getElementById("newEntry");
 var updateButton = document.getElementById("updateButton");
@@ -53,19 +55,20 @@ var consoleButton = document.getElementById("consoleLog");
 var deleteFirstButton = document.getElementById("deleteFirst");
 var deleteLastButton = document.getElementById("deleteLast");
 
-updateButton.addEventListener("click", function () {
-  firstList.update();
-});
-submitButton.addEventListener("click", function () {
+submitButton.addEventListener("click", function() {
   let entry = document.getElementById("newEntryField").value;
   firstList.add(entry);
 });
-consoleButton.addEventListener("click", function () {
-  console.log(firstList.textList);
-});
-deleteFirstButton.addEventListener("click", function () {
-  firstList.deleteFirst();
-});
-deleteLastButton.addEventListener("click", function () {
-  firstList.deleteLast();
-});
+
+// updateButton.addEventListener("click", function() {
+//   firstList.update();
+// });
+// consoleButton.addEventListener("click", function() {
+//   console.log(firstList.textList);
+// });
+// deleteFirstButton.addEventListener("click", function() {
+//   firstList.deleteFirst();
+// });
+// deleteLastButton.addEventListener("click", function() {
+//   firstList.deleteLast();
+// });

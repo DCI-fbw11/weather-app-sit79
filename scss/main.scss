@@ -5,36 +5,43 @@
 
 html {
     font-family: "Source Code Pro", monospace;
-    background: rgb(20, 20, 20);
+    background: $background-color;
     color: rgb(230, 230, 230);
 }
 
 ul {
-    list-style: none; //   width: 30%;
+    list-style: none;
     padding: 0;
+    text-align: left;
     li {
-        border: 1px solid rgb(179, 179, 179);
-        border-radius: 5px;
-        margin: 5px 0px;
-        padding: 2px 5px;
-        background-color: rgb(71, 118, 161);
-        .done {
-            border-radius: 50%;
-            margin: 0;
-            height: 28px;
-            width: 28px;
+        &:hover {
+            @include easeOut();
+            background-color: $tertiary-color;
+            cursor: pointer;
         }
+        @include myBorder();
+        margin: 5px 0px;
+        background-color: $primary-color;
+        text-align: center;
     }
 }
 
+.done {
+    @include easeInOut;
+    margin: 0;
+    padding: 0;
+    height: 28px;
+    font-size: 90%;
+    padding: 5px 0 0 5px;
+}
+
 button {
-    border: 1px solid rgb(179, 179, 179);
+    @include myBorder();
     height: 28px;
     padding: 2px 5px;
-    border-radius: 5px;
     &:hover {
         @include easeOut();
-        background-color: rgb(91, 148, 201);
+        background-color: $primary-color;
         color: white;
     }
 }
@@ -45,15 +52,13 @@ button {
 }
 
 input[type="text"] {
-    border: 1px solid rgb(179, 179, 179);
+    @include myBorder();
     height: 28px;
     padding: 0 5px;
-    border-radius: 5px;
     &:hover,
-    &:active {
+    &:focus {
         @include easeOut();
-        background-color: rgb(91, 148, 201);
-        color: white;
+        border: 2px solid $primary-color; // color: white;
     }
 }
 
@@ -61,6 +66,7 @@ input[type="text"] {
     width: 50%;
     max-width: 400px;
     margin: 0 auto;
+    margin-top: 50px;
     display: grid;
     grid-template-columns: 1fr;
     grid-column-gap: 10px;
