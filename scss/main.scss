@@ -1,6 +1,9 @@
 @import "config";
+
 * {
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
 html {
@@ -13,12 +16,14 @@ ul {
     list-style: none;
     padding: 0;
     text-align: left;
+
     li {
         &:hover {
             @include easeOut();
             background-color: $tertiary-color;
             cursor: pointer;
         }
+
         @include myBorder();
         margin: 5px 0px;
         background-color: $primary-color;
@@ -28,17 +33,18 @@ ul {
 
 .done {
     @include easeInOut;
+    @include height();
     margin: 0;
     padding: 0;
-    height: 28px;
     font-size: 90%;
     padding: 5px 0 0 5px;
 }
 
 button {
     @include myBorder();
-    height: 28px;
+    @include height();
     padding: 2px 5px;
+
     &:hover {
         @include easeOut();
         background-color: $primary-color;
@@ -53,8 +59,10 @@ button {
 
 input[type="text"] {
     @include myBorder();
-    height: 28px;
-    padding: 0 5px;
+    @include height();
+    width: 100%;
+    padding: 2px 5px;
+
     &:hover,
     &:focus {
         @include easeOut();
@@ -69,6 +77,11 @@ input[type="text"] {
     margin-top: 50px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-column-gap: 10px;
     grid-row-gap: 10px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 5px;
 }

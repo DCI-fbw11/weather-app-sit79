@@ -1,56 +1,70 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
 
 html {
   font-family: "Source Code Pro", monospace;
-  background: #171730;
-  color: #e6e6e6; }
+  background: #111125;
+  color: #e6e6e6;
+}
 
 ul {
   list-style: none;
   padding: 0;
-  text-align: left; }
-  ul li {
-    border: 1px solid #b3b3b3;
-    border-radius: 5px;
-    margin: 5px 0px;
-    background-color: #4776a1;
-    text-align: center; }
-    ul li:hover {
-      transition: all 0.2s ease-out;
-      background-color: #355879;
-      cursor: pointer; }
+  text-align: left;
+}
+ul li {
+  border: 1px solid #b3b3b3;
+  border-radius: 5px;
+  margin: 5px 0px;
+  background-color: #4776a1;
+  text-align: center;
+}
+ul li:hover {
+  transition: all 0.2s ease-out;
+  background-color: #355879;
+  cursor: pointer;
+}
 
 .done {
   transition: all 1s ease-in-out;
+  height: 28px;
   margin: 0;
   padding: 0;
-  height: 28px;
   font-size: 90%;
-  padding: 5px 0 0 5px; }
+  padding: 5px 0 0 5px;
+}
 
 button {
   border: 1px solid #b3b3b3;
   border-radius: 5px;
   height: 28px;
-  padding: 2px 5px; }
-  button:hover {
-    transition: all 0.2s ease-out;
-    background-color: #4776a1;
-    color: white; }
+  padding: 2px 5px;
+}
+button:hover {
+  transition: all 0.2s ease-out;
+  background-color: #4776a1;
+  color: white;
+}
 
 ::placeholder {
   text-align: center;
-  font-size: 110%; }
+  font-size: 110%;
+}
 
-input[type="text"] {
+input[type=text] {
   border: 1px solid #b3b3b3;
   border-radius: 5px;
   height: 28px;
-  padding: 0 5px; }
-  input[type="text"]:hover, input[type="text"]:focus {
-    transition: all 0.2s ease-out;
-    border: 2px solid #4776a1; }
+  width: 100%;
+  padding: 2px 5px;
+}
+input[type=text]:hover, input[type=text]:focus {
+  transition: all 0.2s ease-out;
+  border: 2px solid #4776a1;
+}
 
 #control {
   width: 50%;
@@ -59,7 +73,13 @@ input[type="text"] {
   margin-top: 50px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px; }
+  grid-row-gap: 10px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 5px;
+}
 
 /*# sourceMappingURL=main.css.map */

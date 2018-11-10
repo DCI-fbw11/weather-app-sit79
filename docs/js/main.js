@@ -18,6 +18,8 @@ class ListBinding {
       this.element.appendChild(item);
       i++;
     }
+    let position = document.getElementById("newEntryField");
+    position.value = "";
   }
   add(item) {
     if (item !== "") {
@@ -55,8 +57,10 @@ var consoleButton = document.getElementById("consoleLog");
 var deleteFirstButton = document.getElementById("deleteFirst");
 var deleteLastButton = document.getElementById("deleteLast");
 
-submitButton.addEventListener("click", function() {
-  let entry = document.getElementById("newEntryField").value;
+submitButton.addEventListener("click", function(e) {
+  e.preventDefault();
+  let position = document.getElementById("newEntryField");
+  let entry = position.value;
   firstList.add(entry);
 });
 
