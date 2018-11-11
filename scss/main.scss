@@ -9,7 +9,7 @@
 html {
     font-family: "Source Code Pro", monospace;
     background: $background-color;
-    color: rgb(230, 230, 230);
+    color: $primary-text-color;
 }
 
 ul {
@@ -21,11 +21,13 @@ ul {
         &:hover {
             @include easeOut();
             background-color: $tertiary-color;
+            border-color: rgb(218, 218, 218);
             cursor: pointer;
         }
 
         @include myBorder();
         margin: 5px 0px;
+        color: $secondary-text-color;
         background-color: $primary-color;
         text-align: center;
     }
@@ -34,6 +36,8 @@ ul {
 .done {
     @include easeInOut();
     @include height();
+    color: secondary-text-color;
+    border-color: red;
     margin: 0;
     padding: 0;
     font-size: 90%;
@@ -43,6 +47,7 @@ ul {
 .deleted {
     @include easeInOut();
     @include height();
+    color: secondary-text-color;
     font-size: 90%;
     padding: 5px 0 0 5px;
     margin: 0;
@@ -58,7 +63,7 @@ button {
     &:hover {
         @include easeOut();
         background-color: $primary-color;
-        color: white;
+        color: rgb(218, 218, 218);
     }
 }
 
@@ -76,7 +81,7 @@ input[type="text"] {
     &:hover,
     &:focus {
         @include easeOut();
-        border: 2px solid $primary-color; // color: white;
+        color: $tertiary-color;
     }
 }
 

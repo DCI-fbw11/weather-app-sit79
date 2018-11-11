@@ -2,6 +2,7 @@ $primary-color: rgb(43, 45, 90);
 $secondary-color: rgb(131, 131, 131);
 $tertiary-color: rgb(46, 49, 116);
 $primary-text-color: #222;
+$secondary-text-color: rgb(218, 218, 218);
 $background-color: $primary-text-color;
 $deleted-color: $primary-text-color;
 
@@ -19,5 +20,5 @@ $deleted-color: $primary-text-color;
 }
 
 @mixin height {
-    height: 28px;
+    height: 30px;
 }
