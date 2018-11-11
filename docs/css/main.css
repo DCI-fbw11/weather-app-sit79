@@ -6,7 +6,7 @@
 
 html {
   font-family: "Source Code Pro", monospace;
-  background: #111125;
+  background: #222;
   color: #e6e6e6;
 }
 
@@ -16,15 +16,15 @@ ul {
   text-align: left;
 }
 ul li {
-  border: 1px solid #b3b3b3;
+  border: 1px solid #838383;
   border-radius: 5px;
   margin: 5px 0px;
-  background-color: #4776a1;
+  background-color: #2b2d5a;
   text-align: center;
 }
 ul li:hover {
   transition: all 0.2s ease-out;
-  background-color: #355879;
+  background-color: #2e3174;
   cursor: pointer;
 }
 
@@ -37,15 +37,25 @@ ul li:hover {
   padding: 5px 0 0 5px;
 }
 
+.deleted {
+  transition: all 1s ease-in-out;
+  height: 28px;
+  font-size: 90%;
+  padding: 5px 0 0 5px;
+  margin: 0;
+  text-decoration: line-through;
+  background-color: #222;
+}
+
 button {
-  border: 1px solid #b3b3b3;
+  border: 1px solid #838383;
   border-radius: 5px;
   height: 28px;
   padding: 2px 5px;
 }
 button:hover {
   transition: all 0.2s ease-out;
-  background-color: #4776a1;
+  background-color: #2b2d5a;
   color: white;
 }
 
@@ -55,7 +65,7 @@ button:hover {
 }
 
 input[type=text] {
-  border: 1px solid #b3b3b3;
+  border: 1px solid #838383;
   border-radius: 5px;
   height: 28px;
   width: 100%;
@@ -63,7 +73,7 @@ input[type=text] {
 }
 input[type=text]:hover, input[type=text]:focus {
   transition: all 0.2s ease-out;
-  border: 2px solid #4776a1;
+  border: 2px solid #2b2d5a;
 }
 
 #control {
