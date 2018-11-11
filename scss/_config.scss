@@ -3,7 +3,7 @@ $secondary-color: rgb(131, 131, 131);
 $tertiary-color: rgb(46, 49, 116);
 $primary-text-color: #222;
 $background-color: $primary-text-color;
-$deleted-color: $background-color;
+$deleted-color: $primary-text-color;
 
 @mixin easeOut {
     transition: all 0.2s ease-out;
