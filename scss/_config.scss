@@ -1,11 +1,9 @@
-$primary-color: rgb(43, 45, 90);
-$secondary-color: rgb(131, 131, 131);
-$tertiary-color: rgb(46, 49, 116);
-$primary-text-color: #222;
-$secondary-text-color: rgb(218, 218, 218);
-$background-color: $primary-text-color;
+$primary-color: #071942;
+$secondary-color: #172d5f;
+$primary-text-color: #1a1a1a;
+$secondary-text-color: #6d8dda;
+$background-color: #2e4172;
 $deleted-color: $primary-text-color;
-
 @mixin easeOut {
     transition: all 0.2s ease-out;
 }

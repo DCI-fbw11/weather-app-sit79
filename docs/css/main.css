@@ -1,34 +1,42 @@
 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
+  -moz-box-sizing: border-box; }
 
 html {
   font-family: "Source Code Pro", monospace;
-  background: #222;
-  color: #222;
-}
+  background: #2e4172;
+  color: #1a1a1a; }
+
+#control {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 400px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 10px; }
+
+#clearButton {
+  display: none; }
 
 ul {
   list-style: none;
   padding: 0;
-  text-align: left;
-}
-ul li {
-  border: 1px solid #838383;
-  border-radius: 5px;
-  margin: 5px 0px;
-  color: #dadada;
-  background-color: #2b2d5a;
-  text-align: center;
-}
-ul li:hover {
-  transition: all 0.2s ease-out;
-  background-color: #2e3174;
-  border-color: #dadada;
-  cursor: pointer;
-}
+  text-align: left; }
+  ul li {
+    border: 1px solid #172d5f;
+    border-radius: 5px;
+    margin: 5px 0px;
+    color: #6d8dda;
+    background-color: #071942;
+    text-align: center; }
+    ul li:hover {
+      transition: all 0.2s ease-out;
+      color: white;
+      background-color: #172d5f;
+      border-color: #dadada;
+      cursor: pointer; }
 
 .done {
   transition: all 1s ease-in-out;
@@ -38,63 +46,45 @@ ul li:hover {
   margin: 0;
   padding: 0;
   font-size: 90%;
-  padding: 5px 0 0 5px;
-}
+  padding: 5px 0 0 5px; }
 
 .deleted {
   transition: all 1s ease-in-out;
   height: 30px;
-  color: secondary-text-color;
+  color: primary-text-color;
   font-size: 90%;
   padding: 5px 0 0 5px;
   margin: 0;
   text-decoration: line-through;
-  background-color: #222;
-}
+  background-color: #1a1a1a; }
 
 button {
-  border: 1px solid #838383;
+  border: 1px solid #172d5f;
   border-radius: 5px;
   height: 30px;
-  padding: 2px 5px;
-}
-button:hover {
-  transition: all 0.2s ease-out;
-  background-color: #2b2d5a;
-  color: #dadada;
-}
+  padding: 2px 5px; }
+  button:hover {
+    transition: all 0.2s ease-out;
+    background-color: #071942;
+    color: #dadada; }
 
 ::placeholder {
   text-align: center;
-  font-size: 110%;
-}
+  font-size: 110%; }
 
-input[type=text] {
-  border: 1px solid #838383;
+input[type="text"] {
+  border: 1px solid #172d5f;
   border-radius: 5px;
   height: 30px;
   width: 100%;
-  padding: 2px 5px;
-}
-input[type=text]:hover, input[type=text]:focus {
-  transition: all 0.2s ease-out;
-  color: #2e3174;
-}
-
-#control {
-  width: 50%;
-  max-width: 400px;
-  margin: 0 auto;
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-row-gap: 10px;
-}
+  padding: 2px 5px; }
+  input[type="text"]:hover, input[type="text"]:focus {
+    transition: all 0.2s ease-out;
+    color: #172d5f; }
 
 form {
   display: grid;
   grid-template-columns: 1fr;
-  grid-row-gap: 5px;
-}
+  grid-row-gap: 5px; }
 
 /*# sourceMappingURL=main.css.map */
