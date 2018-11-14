@@ -43,7 +43,7 @@ class ListBinding {
     if (this.toDoList.length) {
       for (let item of this.toDoList) {
         if (item.status === "checked") {
-          this.clearButton.style.display = "inline-block";
+          this.clearButton.style.display = "grid";
           break;
         } else {
           this.clearButton.style.display = "none";
@@ -81,8 +81,8 @@ class ListBinding {
 }
 
 const listDiv = document.getElementById("listDiv");
-const myList = document.getElementById("toDoList");
-const doneList = document.getElementById("doneList");
+// const myList = document.getElementById("toDoList");
+// const doneList = document.getElementById("doneList");
 var myTasks = new ListBinding(listDiv);
 
 var newEntry = document.getElementById("newEntry");

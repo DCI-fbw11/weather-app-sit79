@@ -21,50 +21,10 @@ html {
   grid-row-gap: 10px;
 }
 
-#clearButton {
-  display: none;
-}
-
 ul {
-  list-style: none;
   padding: 0;
   text-align: left;
-  li {
-    &:hover {
-      @include easeOut();
-      color: white;
-      background-color: $secondary-color;
-      border-color: rgb(218, 218, 218);
-      cursor: pointer;
-    }
-    @include myBorder();
-    margin: 5px 0px;
-    color: $secondary-text-color;
-    background-color: $primary-color;
-    text-align: center;
-  }
-}
-
-.done {
-  @include easeInOut();
-  @include height();
-  color: secondary-text-color;
-  border-color: red;
-  margin: 0;
-  padding: 0;
-  font-size: 90%;
-  padding: 5px 0 0 5px;
-}
-
-.deleted {
-  @include easeInOut();
-  @include height();
-  color: primary-text-color;
-  font-size: 90%;
-  padding: 5px 0 0 5px;
-  margin: 0;
-  text-decoration: line-through;
-  background-color: $deleted-color;
+  list-style: none;
 }
 
 button {
@@ -72,9 +32,38 @@ button {
   @include height();
   padding: 2px 5px;
   &:hover {
-    @include easeOut();
-    background-color: $primary-color;
+      @include easeOut();
+      background-color: $primary-color;
+      color: rgb(218, 218, 218);
+  }
+}
+
+#clearButton {
+  display: none;
+  width: 100%;
+}
+
+#listDiv {
+  display: grid;
+  grid-template-columns: 1;
+  grid-column-gap: 5px;
+  li {
+    width: 100%;
+    padding: 2px 5px;
+    margin-top: 3px;
     color: rgb(218, 218, 218);
+    background-color: $list-element-color;
+    text-align: center;
+    @include myBorder;
+    @include easeOut;
+    @include height;
+    &:hover {
+      background-color: $list-element-hover-color;
+    }
+    .done {
+      background-color: black;
+      color: red;
+    }
   }
 }
 
@@ -88,11 +77,6 @@ input[type="text"] {
   @include height();
   width: 100%;
   padding: 2px 5px;
-  &:hover,
-  &:focus {
-    @include easeOut();
-    color: $secondary-color;
-  }
 }
 
 form {

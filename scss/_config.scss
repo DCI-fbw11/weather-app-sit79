@@ -1,15 +1,12 @@
 $primary-color: #071942;
-$secondary-color: #172d5f;
+$secondary-color: #0a225a;
 $primary-text-color: #1a1a1a;
 $secondary-text-color: #6d8dda;
 $background-color: #2e4172;
-$deleted-color: $primary-text-color;
+$list-element-color: #2b3d6b;
+$list-element-hover-color: #304477;
 @mixin easeOut {
-    transition: all 0.2s ease-out;
-}
-
-@mixin easeInOut {
-    transition: all 1s ease-in-out;
+    transition: all 0.15s ease-out;
 }
 
 @mixin myBorder {
